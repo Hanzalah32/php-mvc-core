@@ -1,8 +1,8 @@
 {
-    "name": "phpmvc/core",
+    "name": "hanzalahmvc/core",
     "autoload": {
         "psr-4": {
-            "PhpMvc\\Core\\": "."
+            "HanzalahMvc\\Core\\": "."
         }
     },
     "authors": [
