@@ -2,7 +2,7 @@
     "name": "hanzalahmvc/core",
     "autoload": {
         "psr-4": {
-            "HanzalahMvc\\Core\\": "."
+            "AnzalahMvc\\Core\\": "."
         }
     },
     "authors": [
