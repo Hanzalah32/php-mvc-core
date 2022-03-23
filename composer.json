@@ -1,5 +1,5 @@
 {
-    "name": "hanzalahmvc/core",
+    "name": "Aanzalahmvc/core",
     "autoload": {
         "psr-4": {
             "AnzalahMvc\\Core\\": "."
@@ -7,7 +7,7 @@
     },
     "authors": [
         {
-            "name": "Hanzalah",
+            "name": "Aanzalah",
             "email": "hanzalah.web.intern@gmail.com"
         }
     ],
