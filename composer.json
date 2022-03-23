@@ -1,13 +1,13 @@
 {
-    "name": "Aanzalahmvc/core",
+    "name": "anzalahmvc/core",
     "autoload": {
         "psr-4": {
-            "AnzalahMvc\\Core\\": "."
+            "anzalahMvc\\Core\\": "."
         }
     },
     "authors": [
         {
-            "name": "Aanzalah",
+            "name": "anzalah",
             "email": "hanzalah.web.intern@gmail.com"
         }
     ],
