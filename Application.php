@@ -1,11 +1,11 @@
 <?php
 
-namespace app\core;
+namespace anzalahmvc\core;
 
-use app\core\Request;
-use app\core\Response;
-use app\core\db\Database;
-use app\core\db\DbModel;
+use anzalahmvc\core\Request;
+use anzalahmvc\core\Response;
+use anzalahmvc\core\db\Database;
+use anzalahmvc\core\db\DbModel;
 
 class Application
 {
@@ -63,7 +63,7 @@ class Application
     {
         return $this->controller;
     }
-    public function setController(\app\core\Controller $controller): void
+    public function setController(\anzalahmvc\core\Controller $controller): void
     {
         $this->controller = $controller;
     }

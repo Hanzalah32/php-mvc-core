@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core\middlewares;
+namespace anzalahmvc\core\middlewares;
 
 
 class BaseMiddleware

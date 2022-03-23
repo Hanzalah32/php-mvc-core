@@ -3,7 +3,7 @@
 
 namespace app\models;
 
-use app\core\Model;
+use anzalahmvc\core\Model;
 
 
 class ContactForm extends Model

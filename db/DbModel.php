@@ -1,9 +1,9 @@
 <?php
 
-namespace app\core\db;
+namespace anzalahmvc\core\db;
 
-use app\core\Application;
-use app\core\Model;
+use anzalahmvc\core\Application;
+use anzalahmvc\core\Model;
 
 abstract class DbModel extends Model
 {

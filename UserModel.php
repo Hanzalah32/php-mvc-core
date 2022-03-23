@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace anzalahmvc\core;
 
-use app\core\db\DbModel;
+use anzalahmvc\core\db\DbModel;
 
 abstract class UserModel extends DbModel
 {

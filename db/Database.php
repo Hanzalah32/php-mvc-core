@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\db;
+namespace anzalahmvc\core\db;
 
-use app\core\Application;
+use anzalahmvc\core\Application;
 
 
 class Database

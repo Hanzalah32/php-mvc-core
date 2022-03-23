@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\form;
+namespace anzalahmvc\core\form;
 
-use app\core\Model;
+use anzalahmvc\core\Model;
 
 abstract class BaseField
 {
@@ -11,7 +11,7 @@ abstract class BaseField
       /**
      * Field Constructor
      * 
-     * @param \app\core\Model $model
+     * @param \anzalahmvc\core\Model $model
      * @param string   $attribute
      */
 

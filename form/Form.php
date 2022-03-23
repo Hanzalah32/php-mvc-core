@@ -1,9 +1,9 @@
 <?php
 
 
-namespace app\core\form;
+namespace anzalahmvc\core\form;
 
-use app\core\Model;
+use anzalahmvc\core\Model;
 
 class Form
 {

@@ -4,7 +4,7 @@ class m0001_initial
 {
     public function up()
     {
-        $db = \app\core\Application::$app->db;
+        $db =\anzalahmvc\core\Application::$app->db;
         $SQL = "CREATE TABLE orders(
             id INT AUTO_INCREMENT PRIMARY KEY,
             email VARCHAR(255) NOT NULL,
@@ -20,7 +20,7 @@ class m0001_initial
 
     public function down()
     {
-        $db = \app\core\Application::$app->db;
+        $db =\anzalahmvc\core\Application::$app->db;
         $SQL = "DROP TABLE orders";
         $db->pdo->exec($SQL);
     }

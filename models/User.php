@@ -3,8 +3,8 @@
 namespace app\models;
 
 
-use app\core\DbModel;
-use app\core\UserModel;
+use anzalahmvc\core\DbModel;
+use anzalahmvc\core\UserModel;
 
  class User extends UserModel
 {

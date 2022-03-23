@@ -1,9 +1,9 @@
 <?php
 
-namespace app\core\middlewares;
+namespace anzalahmvc\core\middlewares;
 
-use app\core\Application;
-use app\core\exception\ForbiddenException;
+use anzalahmvc\core\Application;
+use anzalahmvc\core\exception\ForbiddenException;
 
 class AuthMiddleware extends BaseMiddleware
 {

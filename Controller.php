@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace anzalahmvc\core;
 
-use app\core\middlewares\BaseMiddleware;
+use anzalahmvc\core\middlewares\BaseMiddleware;
 
 class controller
 {
@@ -10,7 +10,7 @@ class controller
     public string $action = '';
 
     /**
-   * @var \app\core\middlewares\BaseMiddleware[]
+   * @var \anzalahmvc\core\middlewares\BaseMiddleware[]
  */
     protected array $middlewares = [];
     public function setLayout($layout)

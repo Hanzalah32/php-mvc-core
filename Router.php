@@ -1,12 +1,12 @@
 <?php
 
-namespace app\core;
+namespace anzalahmvc\core;
 
-use app\core\Request;
-use app\core\Response;
-use app\core\Application;
-use app\core\exception\NotFoundException;
-use app\core\exception\ForbiddenException;
+use anzalahmvc\core\Request;
+use anzalahmvc\core\Response;
+use anzalahmvc\core\Application;
+use anzalahmvc\core\exception\NotFoundException;
+use anzalahmvc\core\exception\ForbiddenException;
 
 
 class Router
@@ -48,7 +48,7 @@ class Router
 
      
         if (is_array($callback)) {
-            /** @var \app\core\controller $controller */
+            /** @var \anzalahmvc\core\controller $controller */
             $controller= new $callback[0]();
             Application::$app->controller = $controller;
             $controller->action = $callback[1];

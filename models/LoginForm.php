@@ -1,8 +1,8 @@
 <?php
 
 namespace app\models;
-use app\core\Model;
-use app\core\Application;
+use anzalahmvc\core\Model;
+use anzalahmvc\core\Application;
 
 
 
