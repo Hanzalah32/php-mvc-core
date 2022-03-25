@@ -1,0 +1,17 @@
+{
+    "name": "anzalahmvc/core",
+    "autoload": {
+        "psr-4": {
+            "anzalahMvc\\Core\\": "."
+        }
+    },
+    "authors": [
+        {
+            "name": "anzalah",
+            "email": "hanzalah.web.intern@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}
