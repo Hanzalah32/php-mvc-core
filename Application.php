@@ -52,7 +52,9 @@ class Application
         try {
             echo $this->router->resolve();
         } catch (\Exception $e) {
-            $this->response->setStatusCode($e->getCode());
+            if(in_array($e->getCode(), [404,301,403,200,201,500])){
+                $this->response->setStatusCode($e->getCode());
+            }
             echo  $this->view->renderView('_error', [
                 'exception' => $e
             ]);

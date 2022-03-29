@@ -6,53 +6,25 @@ namespace anzalahMvc\Core\models;
 use anzalahMvc\Core\DbModel;
 use anzalahMvc\Core\UserModel;
 
- class User extends UserModel
+class User extends UserModel
 {
-    const STATUS_INACTIVE = 0;
-    const STATUS_ACTIVE = 1;
-    const STATUS_DELETED = 2;
-
+    public int $id = 0;
     public string $firstname = '';
     public string $lastname = '';
     public string $email = '';
-    public int $status = self::STATUS_INACTIVE;
     public string $password = '';
     public string $confirm_password = '';
 
-    public function tableName(): string
+    public static function tableName(): string
     {
-        return 'users';
-    }
-
-    public function primaryKey(): string
-    {
-        return 'id';
-    }
-
-    public function save()
-    {
-        $this->status = self::STATUS_INACTIVE;
-        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
-       return parent::save();
- 
-    }
-    public function rules(): array
-    {
-        return [
-            'firstname' => [self::RULE_REQUIRED],
-            'lastname' =>[self::RULE_REQUIRED],
-            'email' => [self::RULE_REQUIRED::RULE_EMAIL, [
-                self::RULE_UNIQUE, 'class' => self::class 
-            ]],
-            'password' => [self::RULE_REQUIRED::RULE_MIN, 'min'::RULE_MAX, 'max' => 24],
-            'ConfirmPassword' =>[self::RULE_REQUIRED::RULE_MATCH, 'match' => 'password'],
-        ];
+        return 'user';
     }
 
     public function attributes(): array
     {
-        return ['firstname', 'lastname', 'email', 'password', 'status'];
+        return ['firstname', 'lastname', 'email', 'password'];
     }
+
     public function labels(): array
     {
         return [
@@ -60,11 +32,32 @@ use anzalahMvc\Core\UserModel;
             'lastname' => 'Last name',
             'email' => 'Email',
             'password' => 'Password',
-            'passwordConfirm' => 'Confirm password',
+            'confirm_password' => 'Password Confirm'
         ];
     }
+
+    public function rules()
+    {
+        return [
+            'firstname' => [self::RULE_REQUIRED],
+            'lastname' => [self::RULE_REQUIRED],
+            'email' => [self::RULE_REQUIRED, self::RULE_EMAIL, [
+                self::RULE_UNIQUE, 'class' => self::class
+            ]],
+            'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8]],
+            'confirm_password' => [[self::RULE_MATCH, 'match' => 'password']],
+        ];
+    }
+
+    public function save()
+    {
+        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+
+        return parent::save();
+    }
+
     public function getDisplayName(): string
     {
-        return $this->firstname.' '.$this->lastname;
+        return $this->firstname . ' ' . $this->lastname;
     }
 }

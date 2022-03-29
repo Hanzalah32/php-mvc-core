@@ -1,6 +1,6 @@
 <?php
 
-namespace anzalahmvc\core;
+namespace anzalahMvc\Core;
 
 use anzalahMvc\Core\db\DbModel;
 

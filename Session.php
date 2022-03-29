@@ -1,6 +1,6 @@
 <?php
 
-namespace anzalahmvc\core;
+namespace anzalahMvc\Core;
 
 class Session
 {   
